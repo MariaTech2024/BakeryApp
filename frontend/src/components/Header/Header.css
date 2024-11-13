@@ -1,0 +1,57 @@
+.header-container {
+    width: 100%; 
+    max-width: 1300px;
+    margin: 0 auto;
+    border: 2px solid #ccc;
+    border-radius: 10px; 
+    background-color: #eee3eb; 
+    
+  }
+
+.header {
+    display: flex;
+    height: 20vw; 
+    margin: 10px auto;
+    background-size: contain; 
+    background-position: right; 
+    position: relative;
+    
+}
+
+.header-contents {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; 
+    gap: 1.5vw;
+    max-width: 70%;
+    bottom: 15%; 
+    left: 4vw;
+    animation: fadeIn 4s; 
+    
+}
+
+.header-contents h2 {
+    font-size: 2rem;
+    color: rgb(94, 21, 87);
+}
+
+.header-contents p {
+    font-size: 20px;
+    margin-bottom: 0.5rem;
+}
+
+.header-contents button {
+    color: rgb(94, 21, 87);
+    padding: 10px;
+    font-weight: 600;
+    background-color: rgb(253, 252, 254);
+    font-size: 18px;
+    border: 2px solid  rgb(67, 20, 61);
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+button:hover{
+    background-color: rgb(172, 146, 198);
+}
