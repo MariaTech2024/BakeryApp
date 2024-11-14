@@ -5,7 +5,8 @@
     border: 2px solid #ccc;
     border-radius: 10px; 
     background-color: #eee3eb; 
-    
+    padding: 20px;
+    overflow: hidden;
   }
 
 .header {
@@ -15,7 +16,8 @@
     background-size: contain; 
     background-position: right; 
     position: relative;
-    
+    flex-wrap: wrap; 
+    box-sizing: border-box;
 }
 
 .header-contents {
@@ -54,4 +56,87 @@
 
 button:hover{
     background-color: rgb(172, 146, 198);
+}
+
+
+@media (max-width: 1024px) {
+    .header {
+        height: 30vw;
+        background-position: center;
+    }
+
+    .header-contents {
+        bottom: 10%;
+        left: 3vw;
+    }
+
+    .header-contents h2 {
+        font-size: 1.8rem;
+    }
+
+    .header-contents p {
+        font-size: 18px;
+    }
+
+    .header-contents button {
+        font-size: 16px;
+        padding: 8px 14px;
+    }
+}
+
+@media (max-width: 768px) {
+    .header {
+        height: 40vw;
+        padding: 10px;
+    }
+
+    .header-contents {
+        bottom: 8%;
+        left: 2vw;
+        gap: 1vw;
+        max-width: 65%; 
+    }
+
+    .header-contents h2 {
+        font-size: 1.5rem;
+    }
+
+    .header-contents p {
+        font-size: 16px;
+    }
+
+    .header-contents button {
+        font-size: 15px;
+        padding: 8px 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .header {
+        height: auto;
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .header-contents {
+        position: static; 
+        width: 90%;
+        margin: 0 auto;
+        align-items: center;
+        text-align: center;
+        gap: 1rem;
+    }
+
+    .header-contents h2 {
+        font-size: 1.3rem;
+    }
+
+    .header-contents p {
+        font-size: 14px;
+    }
+
+    .header-contents button {
+        font-size: 14px;
+        padding: 6px 10px;
+    }
 }
