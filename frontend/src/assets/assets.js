@@ -39,10 +39,6 @@ import food_25 from './food_25.png'
 import food_26 from './food_26.png'
 import food_27 from './food_27.png'
 import food_28 from './food_28.png'
-import food_29 from './food_29.png'
-import food_30 from './food_30.png'
-import food_31 from './food_31.png'
-import food_32 from './food_32.png'
 
 import add_icon_white from './add_icon_white.png'
 import add_icon_green from './add_icon_green.png'
@@ -116,204 +112,204 @@ export const menu_list = [
 export const food_list = [
     {
         _id: "1",
-        name: "Greek salad",
+        name: "Strawberry cake",
         image: food_1,
-        price: 12,
-        description: "Food provides essential nutrients for overall health and well-being",
+        price: 15,
+        description: "A soft and sweet strawberry cake with fresh strawberries and creamy frosting.",
         category: "Cakes"
     },
     {
         _id: "2",
-        name: "Veg salad",
+        name: "Black Forest cake",
         image: food_2,
-        price: 18,
-        description: "Food provides essential nutrients for overall health and well-being",
+        price: 20,
+        description: "A soft chocolate cake layered with cherries, whipped cream, and chocolate shavings.",
         category: "Cakes"
     }, {
         _id: "3",
-        name: "Clover Salad",
+        name: "Carrot cake",
         image: food_3,
-        price: 16,
-        description: "Food provides essential nutrients for overall health and well-being",
+        price: 12,
+        description: "A moist and spiced cake made with fresh carrots and topped with creamy frosting.",
         category: "Cakes"
     }, {
         _id: "4",
-        name: "Chicken Salad",
+        name: "Rafaello cake",
         image: food_4,
-        price: 24,
-        description: "Food provides essential nutrients for overall health and well-being",
+        price: 25,
+        description: "A light and creamy cake with coconut, white chocolate, and almond flavors.",
         category: "Cakes"
     }, {
         _id: "5",
-        name: "Lasagna Rolls",
+        name: "Berries tart",
         image: food_5,
-        price: 14,
-        description: "Food provides essential nutrients for overall health and well-being",
+        price: 15,
+        description: "A crisp tart filled with creamy custard and topped with fresh wild berries.",
         category: "Tarts"
     }, {
         _id: "6",
-        name: "Peri Peri Rolls",
+        name: "Pistachio tart",
         image: food_6,
-        price: 12,
-        description: "Food provides essential nutrients for overall health and well-being",
+        price: 15,
+        description: "A buttery tart filled with smooth pistachio cream and topped with crunchy pistachios.",
         category: "Tarts"
     }, {
         _id: "7",
-        name: "Chicken Rolls",
+        name: "Chocolate tart",
         image: food_7,
-        price: 20,
-        description: "Food provides essential nutrients for overall health and well-being",
+        price: 15,
+        description: "A rich and decadent tart filled with smooth chocolate ganache in a crispy crust.",
         category: "Tarts"
     }, {
         _id: "8",
-        name: "Veg Rolls",
+        name: "Pumpkin tart",
         image: food_8,
         price: 15,
-        description: "Food provides essential nutrients for overall health and well-being",
+        description: "A warm and spiced tart filled with creamy pumpkin filling in a buttery crust.",
         category: "Tarts"
     }, {
         _id: "9",
-        name: "Ripple Ice Cream",
+        name: "Butter croissant",
         image: food_9,
-        price: 14,
-        description: "Food provides essential nutrients for overall health and well-being",
+        price: 5,
+        description: "A flaky, golden croissant made with rich, buttery layers for a light and crispy texture.",
         category: "Croissants"
     }, {
         _id: "10",
-        name: "Fruit Ice Cream",
+        name: "Almond croissant",
         image: food_10,
-        price: 22,
-        description: "Food provides essential nutrients for overall health and well-being",
+        price: 12,
+        description: "A flaky, buttery croissant filled with sweet almond cream and topped with sliced almonds.",
         category: "Croissants"
     }, {
         _id: "11",
-        name: "Jar Ice Cream",
+        name: "Raspberry croissant",
         image: food_11,
         price: 10,
-        description: "Food provides essential nutrients for overall health and well-being",
+        description: "A buttery, flaky croissant filled with tangy raspberry jam and a hint of sweetness.",
         category: "Croissants"
     }, {
         _id: "12",
-        name: "Vanilla Ice Cream",
+        name: "Chocolate croissant",
         image: food_12,
-        price: 12,
-        description: "Food provides essential nutrients for overall health and well-being",
+        price: 8,
+        description: "A flaky, buttery croissant filled with rich, melted chocolate.",
         category: "Croissants"
     },
     {
         _id: "13",
-        name: "Chicken Sandwich",
+        name: "Caramel eclair",
         image: food_13,
         price: 12,
-        description: "Food provides essential nutrients for overall health and well-being",
+        description: "A light, airy pastry filled with smooth caramel cream and topped with a glossy caramel glaze.",
         category: "Eclairs"
     },
     {
         _id: "14",
-        name: "Vegan Sandwich",
+        name: "Hazelnut eclair",
         image: food_14,
-        price: 18,
-        description: "Food provides essential nutrients for overall health and well-being",
+        price: 15,
+        description: "A delicate eclair filled with creamy hazelnut praline and topped with a sweet, crunchy glaze.",
         category: "Eclairs"
     }, {
         _id: "15",
-        name: "Grilled Sandwich",
+        name: "Chocolate eclair",
         image: food_15,
-        price: 16,
-        description: "Food provides essential nutrients for overall health and well-being",
+        price: 10,
+        description: "A classic eclair filled with rich chocolate cream and topped with a smooth chocolate glaze.",
         category: "Eclairs"
     }, {
         _id: "16",
-        name: "Bread Sandwich",
+        name: "Strawberry eclair",
         image: food_16,
-        price: 24,
-        description: "Food provides essential nutrients for overall health and well-being",
+        price: 15,
+        description: "A light eclair filled with creamy strawberry-flavored filling and topped with a sweet strawberry glaze.",
         category: "Eclairs"
     }, {
         _id: "17",
-        name: "Cup Cake",
+        name: "Chocolate cupcake",
         image: food_17,
-        price: 14,
-        description: "Food provides essential nutrients for overall health and well-being",
+        price: 7,
+        description: "A moist and fluffy chocolate cupcake topped with creamy chocolate frosting.",
         category: "Cupcakes"
     }, {
         _id: "18",
-        name: "Vegan Cake",
+        name: "Lemon cupcake",
         image: food_18,
-        price: 12,
-        description: "Food provides essential nutrients for overall health and well-being",
+        price: 5,
+        description: "A light and fluffy lemon cupcake with a tangy lemon flavor and a creamy frosting.",
         category: "Cupcakes"
     }, {
         _id: "19",
-        name: "Butterscotch Cake",
+        name: "Strawberry cupcake",
         image: food_19,
-        price: 20,
-        description: "Food provides essential nutrients for overall health and well-being",
+        price: 7,
+        description: "A soft and sweet strawberry cupcake topped with creamy strawberry frosting.",
         category: "Cupcakes"
     }, {
         _id: "20",
-        name: "Sliced Cake",
+        name: "Blueberry cupcake",
         image: food_20,
-        price: 15,
-        description: "Food provides essential nutrients for overall health and well-being",
+        price: 8,
+        description: "A moist blueberry cupcake bursting with fresh blueberries, topped with a smooth frosting.",
         category: "Cupcakes"
     }, {
         _id: "21",
-        name: "Garlic Mushroom ",
+        name: "Chocolate roll",
         image: food_21,
-        price: 14,
-        description: "Food provides essential nutrients for overall health and well-being",
+        price: 16,
+        description: "A soft and spongy chocolate cake rolled with a rich, creamy filling and dusted with cocoa powder.",
         category: "Rolls"
     }, {
         _id: "22",
-        name: "Fried Cauliflower",
+        name: "Meringue roll",
         image: food_22,
-        price: 22,
-        description: "Food provides essential nutrients for overall health and well-being",
+        price: 18,
+        description: "A light and crispy meringue roll filled with whipped cream and fresh, juicy berries.",
         category: "Rolls"
     }, {
         _id: "23",
-        name: "Mix Veg Pulao",
+        name: "Mango roll",
         image: food_23,
-        price: 10,
-        description: "Food provides essential nutrients for overall health and well-being",
+        price: 22,
+        description: "A soft and fluffy sponge cake rolled with a creamy mango filling and topped with fresh mango slices.",
         category: "Rolls"
     }, {
         _id: "24",
-        name: "Rice Zucchini",
+        name: "Honey roll",
         image: food_24,
-        price: 12,
-        description: "Food provides essential nutrients for overall health and well-being",
+        price: 15,
+        description: "A moist honey cake rolled with smooth condensed milk frosting, offering a sweet and rich flavor.",
         category: "Rolls"
     },
     {
         _id: "25",
-        name: "Cheese Pasta",
+        name: "Blueberry cheesecake macarons",
         image: food_25,
-        price: 12,
-        description: "Food provides essential nutrients for overall health and well-being",
+        price: 3,
+        description: "Delicate macaron shells filled with creamy blueberry cheesecake filling, offering a sweet and tangy flavor.",
         category: "Macarons"
     },
     {
         _id: "26",
-        name: "Tomato Pasta",
+        name: "Candy cane macarons",
         image: food_26,
-        price: 18,
-        description: "Food provides essential nutrients for overall health and well-being",
+        price: 3,
+        description: "Festive macaron shells filled with a peppermint-flavored filling, offering a sweet and minty holiday treat.",
         category: "Macarons"
     }, {
         _id: "27",
-        name: "Creamy Pasta",
+        name: "Tropical mango macarons",
         image: food_27,
-        price: 16,
-        description: "Food provides essential nutrients for overall health and well-being",
+        price: 3,
+        description: "Crisp macaron shells filled with a tropical mango-flavored filling, offering a sweet and fruity taste.",
         category: "Macarons"
     }, {
         _id: "28",
-        name: "Chicken Pasta",
+        name: "Red velvet macarons",
         image: food_28,
-        price: 24,
-        description: "Food provides essential nutrients for overall health and well-being",
+        price: 3,
+        description: "Soft and delicate macaron shells filled with rich cream cheese filling, offering a sweet and tangy red velvet flavor.",
         category: "Macarons"
     }
 ]
