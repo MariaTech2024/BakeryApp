@@ -25,4 +25,4 @@ const ExploreMenu = ({category, setCategory}) => {
   )
 }
 
-export default ExploreMenu
+export default ExploreMenu;
