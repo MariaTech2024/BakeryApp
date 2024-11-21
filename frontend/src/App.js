@@ -12,14 +12,19 @@ import MyOrders from './pages/MyOrders/MyOrders.jsx';
 const App = () => {
 
 const [showLogin, setShowLogin] = useState(false);
+const [searchQuery, setSearchQuery] = useState(""); // Search query state
+
+const handleSearchChange = (query) => {
+  setSearchQuery(query); // Update search query
+};
 
   return (
     <>
     {showLogin?<LoginPopup setShowLogin={setShowLogin}/>:<></>}
     <div className='app'>
-<NavBar setShowLogin={setShowLogin} />
+<NavBar setShowLogin={setShowLogin} onSearchChange={handleSearchChange}/>
 <Routes>
-  < Route path='/' element={<Home/>} />
+  < Route path='/' element={<Home searchQuery={searchQuery} setSearchQuery={setSearchQuery} />} />
   < Route path='/cart' element={<Cart/>} />
   < Route path='/order' element={<PlaceOrder/>} />
   < Route path='/verify' element={<Verify/>} />
