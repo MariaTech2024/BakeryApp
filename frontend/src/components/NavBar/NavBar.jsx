@@ -8,12 +8,18 @@ const NavBar = ({ setShowLogin }) => {
 
   const [menu, setMenu] = useState("home");
   const {getTotalCartAmount, token, setToken} = useContext(StoreContext);
+  const [isSearchVisible, setIsSearchVisible] = useState(false);
   const navigate = useNavigate();
+  
   const logout = () => {
 localStorage.removeItem("token");
 setToken("");
 navigate("/")
 }
+
+const toggleSearch = () => {
+  setIsSearchVisible((prevState) => !prevState); // Toggle visibility
+};
 
   return (
     <div className="navbar">
@@ -52,8 +58,20 @@ navigate("/")
         </a>
       </ul>
       <div className="navbar-right">
-        <img src={assets.search_icon} alt="" />
-        <div className="navbar-search-icon">
+        <img
+            src={assets.search_icon}
+            alt="search"
+            onClick={toggleSearch} // Toggle search input visibility
+          />
+      <div className="navbar-search-icon">
+          {isSearchVisible && (
+            <input
+              type="text"
+              placeholder="Search..."
+              className="search-input"
+            />
+          )}
+          
           <Link to="/cart">
             <img src={assets.basket_icon} alt="" />{" "}
           </Link>

@@ -51,21 +51,12 @@
     cursor: pointer;
 }
 
-.navbar-search-icon{
-    position: relative;
-}
-
 .navbar-right img{
     width: 35px; 
     height: 35px; 
     object-fit: contain;  
+    cursor: pointer;
 }
-
-.navbar-search-icon img {
-    width: 35px; 
-    height: 35px; 
-    object-fit: contain; 
-  }
 
 .navbar-search-icon .dot{
     position: absolute;
@@ -120,6 +111,33 @@
 .nav-profile-dropdown .logout img{
     width: 35px;
     height: 30px;
+}
+
+.navbar-search-icon {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.search-input {
+    position: absolute;
+    left: -280px; 
+    padding: 5px;
+    margin-left: 10px;
+    border: 1px solid #39143f;
+    border-radius: 4px;
+    visibility: visible;
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+}
+  
+.search-input.hidden {
+    visibility: hidden;
+    opacity: 0;
+}
+  
+.navbar-search-icon input {
+    display: block;
 }
 
 
