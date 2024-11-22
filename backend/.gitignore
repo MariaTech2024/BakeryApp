@@ -9,3 +9,4 @@ node_modules/
 
 # Ignore other files
 secret_files/
+.vercel
