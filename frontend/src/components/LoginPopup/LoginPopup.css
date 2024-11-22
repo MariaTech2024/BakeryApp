@@ -89,3 +89,42 @@
     font-weight: 500;
     cursor: pointer;
 }
+
+@media (max-width: 480px) {
+    .login-popup-container {
+        width: 95%;
+        padding: 15px;
+        gap: 12px;
+    }
+
+    .login-popup-title h2 {
+        font-size: 14px;
+    }
+
+    .login-popup-inputs input {
+        padding: 6px;
+        font-size: 12px;
+    }
+
+    .login-popup-container button {
+        padding: 8px;
+        font-size: 14px;
+    }
+
+    .login-popup-condition {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .login-popup p {
+        font-size: 10px;
+    }
+
+    .login-popup p span {
+        font-size: 10px;
+    }
+
+    .login-popup-title img {
+        width: 18px;
+    }
+}

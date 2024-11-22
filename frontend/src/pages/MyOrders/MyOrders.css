@@ -42,3 +42,72 @@
     color: #ffff;
     cursor: pointer;
 }
+
+@media (max-width: 768px) {
+    .my-orders {
+        margin: 20px;
+    }
+
+    .my-orders .container {
+        margin-top: 20px;
+        gap: 15px;
+    }
+
+    .my-orders-order {
+        grid-template-columns: 1fr 3fr 1fr 1fr;
+        gap: 20px;
+        padding: 10px;
+    }
+
+    .my-orders-order img {
+        width: 40px;
+    }
+
+    .my-orders-order p span {
+        font-size: 12px;
+    }
+
+    .my-orders-order p b {
+        font-size: 14px;
+    }
+
+    .my-orders-order button {
+        padding: 10px;
+        font-size: 14px;
+    }
+}
+
+/* For extra small screens (phones in portrait mode) */
+@media (max-width: 480px) {
+    .my-orders {
+        margin: 10px;
+    }
+
+    .my-orders .container {
+        margin-top: 15px;
+        gap: 10px;
+    }
+
+    .my-orders-order {
+        grid-template-columns: 1fr 2fr 1fr;
+        gap: 15px;
+        padding: 8px;
+    }
+
+    .my-orders-order img {
+        width: 30px;
+    }
+
+    .my-orders-order p span {
+        font-size: 11px;
+    }
+
+    .my-orders-order p b {
+        font-size: 12px;
+    }
+
+    .my-orders-order button {
+        padding: 8px;
+        font-size: 12px;
+    }
+}

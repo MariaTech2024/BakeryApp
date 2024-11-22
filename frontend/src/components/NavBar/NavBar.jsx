@@ -85,12 +85,7 @@ const NavBar = ({ setShowLogin, onSearchChange }) => {
         </a>
       </ul>
       <div className="navbar-right">
-        <img
-          src={assets.search_icon}
-          alt="search"
-          onClick={toggleSearch} 
-        />
-        <div className="navbar-search-icon">
+      <div className="navbar-search-icon">
           {isSearchVisible && (
             <input
               type="text"
@@ -101,6 +96,12 @@ const NavBar = ({ setShowLogin, onSearchChange }) => {
               onKeyDown={handleSearchSubmit}
             />
           )}
+        <img
+          src={assets.search_icon}
+          alt="search"
+          onClick={toggleSearch} 
+        />
+        
           
           <Link to="/cart">
             <img src={assets.basket_icon} alt="" />{" "}

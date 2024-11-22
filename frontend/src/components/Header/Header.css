@@ -58,7 +58,6 @@ button:hover{
     background-color: rgb(172, 146, 198);
 }
 
-
 @media (max-width: 1024px) {
     .header {
         height: 30vw;
