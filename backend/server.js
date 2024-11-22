@@ -30,7 +30,11 @@ app.get('*', (req, res) => {
 
 //middleware
 app.use(express.json());
-app.use(cors());
+app.use(cors({
+    origin: 'https://bakery-app-black.vercel.app', 
+    methods: 'GET,POST', 
+    credentials: true 
+  }));
 
 //db connection
 connectDB();
