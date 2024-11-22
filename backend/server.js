@@ -1,5 +1,7 @@
 import express from "express";
 import cors from "cors";
+import path from 'path';
+import { fileURLToPath } from 'url';
 import { connectDB } from "./config/db.js";
 import foodRouter from "./routes/foodRoute.js";
 import userRouter from "./routes/userRoute.js";
@@ -12,6 +14,19 @@ dotenv.config();
 
 const app = express();
 const port = 4000;
+
+/// Get the current directory name
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
+
+// Serve the static files from the React app
+app.use(express.static(path.join(__dirname, '../frontend/dist')));
+
+// Handle requests by serving index.html for all routes
+app.get('*', (req, res) => {
+    res.sendFile(path.join(__dirname, '../frontend/dist', 'index.html'));
+});
 
 //middleware
 app.use(express.json());
