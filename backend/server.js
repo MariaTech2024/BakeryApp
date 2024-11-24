@@ -16,8 +16,8 @@ const app = express();
 const port = 4000;
 
 /// Get the current directory name
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
+//const __filename = fileURLToPath(import.meta.url);
+//const __dirname = path.dirname(__filename);
 
 
 
@@ -28,7 +28,7 @@ app.get("/api/hello", (req, res) => {
 //middleware
 app.use(express.json());
 app.use(cors({
-  origin: "https://bakery-app-x153.vercel.app",  
+  origin: "http://localhost:3000",  
   methods: 'GET, POST',            
   credentials: true                 
 }));
@@ -50,7 +50,6 @@ app.get("/", (req,res)=>{
     res.send("Server is working!")
 });
 
-app.listen(port, ()=>{
-    console.log(`Server is running on http://localhost:${port}`)
-})
-
+export default (req, res) => {
+  app(req, res);  // Vercel serverless handler
+};
