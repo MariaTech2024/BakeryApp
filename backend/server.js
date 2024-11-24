@@ -28,15 +28,14 @@ app.get('*', (req, res) => {
     res.sendFile(path.join(__dirname, '../frontend/dist', 'index.html'));
 });
 
+
 //middleware
 app.use(express.json());
 app.use(cors({
-    origin: process.env.NODE_ENV === "production" 
-      ? "https://bakery-app-xiu4.vercel.app" 
-      : "http://localhost:3000", 
-    methods: 'GET, POST',
-    credentials: true, 
-  }));
+  origin: "http://localhost:3000",  
+  methods: 'GET, POST',            
+  credentials: true                 
+}));
 
 //db connection
 connectDB();

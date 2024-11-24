@@ -6,7 +6,7 @@ export const StoreContext = createContext(null);
 
 const StoreContextProvider = (props) => {
   const [cartItems, setCartItems] = useState({});
-  const url = process.env.NODE_ENV === "production" ? "https://bakery-app-xiu4.vercel.app" : "http://localhost:4000";
+  const url = "http://localhost:4000";
   const [token, setToken] = useState("");
   const [food_list, setFoodList] = useState([]);
 
@@ -34,18 +34,25 @@ if (token) {
     for (const item in cartItems) {
       if (cartItems[item] > 0) {
         let itemInfo = food_list.find((product) => product._id === item);
-        totalAmount += itemInfo.price * cartItems[item];
+        // Check if itemInfo is found before accessing its properties
+        if (itemInfo) {
+          totalAmount += itemInfo.price * cartItems[item];
+        } else {
+          console.warn(`Item with ID ${item} not found in food_list`);
+        }
       }
     }
     return totalAmount;
   };
 
   const fetchFoodList = async () => {
-    const response = await axios.get(url+"/api/food/list", {
-      withCredentials: true,
-    });
-    setFoodList(response.data.data)
-  }
+    try {
+      const response = await axios.get(url + "/api/food/list");
+      setFoodList(response.data.data);
+    } catch (error) {
+      console.error("Error fetching food list:", error);
+    }
+  };
 
   const loadCartData = async (token) => {
     const response = await axios.post(url+"/api/cart/get", {}, {headers:{token}});
