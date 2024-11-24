@@ -32,8 +32,8 @@ app.get('*', (req, res) => {
 app.use(express.json());
 app.use(cors({
     origin: process.env.NODE_ENV === "production" 
-      ? "https://bakery-app-xiu4.vercel.app" // Production frontend URL
-      : "http://localhost:3000", // Local development frontend URL
+      ? "https://bakery-app-xiu4.vercel.app" 
+      : "http://localhost:3000", 
     methods: 'GET, POST',
     credentials: true, 
   }));
