@@ -9,7 +9,7 @@
         }
       },
       {
-        "src": "server/server.js",
+        "src": "backend/server.js",
         "use": "@vercel/node"
       }
     ],
@@ -20,7 +20,7 @@
       },
       {
         "src": "/api/(.*)",
-        "dest": "server/$1"
+        "dest": "backend/$1"
       }
     ]
   }
