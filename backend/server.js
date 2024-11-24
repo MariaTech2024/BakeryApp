@@ -25,6 +25,9 @@ app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, 'frontend/build', 'index.html'));
 });
 
+app.get("/api/hello", (req, res) => {
+    res.send({ message: "Hello from the backend!" });
+  });
 
 //middleware
 app.use(express.json());
