@@ -23,7 +23,7 @@ connectDB();
 
 //middleware
 app.use(cors({
-  origin: 'http://localhost:3000', 
+  origin: 'https://cakery-app.vercel.app', 
   credentials: true, 
 }));
 
