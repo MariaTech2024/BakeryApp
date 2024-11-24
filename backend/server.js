@@ -20,12 +20,9 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 
-// Serve the static files from the React app
-app.use(express.static(path.join(__dirname, '../frontend/dist')));
-
-// Handle requests by serving index.html for all routes
+app.use(express.static(path.join(__dirname, 'frontend/build')));
 app.get('*', (req, res) => {
-    res.sendFile(path.join(__dirname, '../frontend/dist', 'index.html'));
+  res.sendFile(path.join(__dirname, 'frontend/build', 'index.html'));
 });
 
 
