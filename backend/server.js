@@ -1,16 +1,22 @@
 import express from "express";
 import cors from "cors";
 import { connectDB } from "./config/db.js";
+import path from "path";
+import { fileURLToPath } from 'url';
+import { dirname } from 'path';
 import foodRouter from "./routes/foodRoute.js";
 import userRouter from "./routes/userRoute.js";
 import cartRouter from "./routes/cartRoute.js";
 import orderRouter from "./routes/orderRoute.js";
 import dotenv from "dotenv";
-import bodyParser from "body-parser";
+
 
 
 dotenv.config();
 const app = express();
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
 
 //db connection
 connectDB();
@@ -21,15 +27,13 @@ app.use(cors({
   credentials: true, 
 }));
 
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 
 
 //API endpoint
-
 app.use("/api/food", foodRouter);
-app.use("/images", express.static('uploads'));
+app.use("/images", express.static(path.join(__dirname, '/tmp/uploads')));
 app.use("/api/user", userRouter);
 app.use("/api/cart", cartRouter);
 app.use("/api/order", orderRouter);
