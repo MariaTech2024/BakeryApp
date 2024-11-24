@@ -28,7 +28,7 @@ app.get("/api/hello", (req, res) => {
 //middleware
 app.use(express.json());
 app.use(cors({
-  origin: "http://localhost:3000",  
+  origin: "https://bakery-app-x153.vercel.app",  
   methods: 'GET, POST',            
   credentials: true                 
 }));
