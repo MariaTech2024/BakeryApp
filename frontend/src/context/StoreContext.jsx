@@ -6,7 +6,7 @@ export const StoreContext = createContext(null);
 
 const StoreContextProvider = (props) => {
   const [cartItems, setCartItems] = useState({});
-  const url = process.env.NODE_ENV === "production" ? "https://bakery-app-xiu4.vercel.app" : "https://localhost:4000";
+  const url = process.env.NODE_ENV === "production" ? "https://bakery-app-xiu4.vercel.app" : "http://localhost:4000";
   const [token, setToken] = useState("");
   const [food_list, setFoodList] = useState([]);
 
@@ -41,7 +41,9 @@ if (token) {
   };
 
   const fetchFoodList = async () => {
-    const response = await axios.get(url+"/api/food/list");
+    const response = await axios.get(url+"/api/food/list", {
+      withCredentials: true,
+    });
     setFoodList(response.data.data)
   }
 

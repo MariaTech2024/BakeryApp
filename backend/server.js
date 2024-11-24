@@ -31,9 +31,11 @@ app.get('*', (req, res) => {
 //middleware
 app.use(express.json());
 app.use(cors({
-    origin: 'https://bakery-app-black.vercel.app', 
-    methods: 'GET,POST', 
-    credentials: true 
+    origin: process.env.NODE_ENV === "production" 
+      ? "https://bakery-app-xiu4.vercel.app" // Production frontend URL
+      : "http://localhost:3000", // Local development frontend URL
+    methods: 'GET, POST',
+    credentials: true, 
   }));
 
 //db connection
@@ -54,6 +56,6 @@ app.get("/", (req,res)=>{
 });
 
 app.listen(port, ()=>{
-    console.log(`Server is running on https://localhost:${port}`)
+    console.log(`Server is running on http://localhost:${port}`)
 })
 
