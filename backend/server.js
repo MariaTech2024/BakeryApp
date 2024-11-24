@@ -16,18 +16,15 @@ const app = express();
 connectDB();
 
 //middleware
-app.use(cors());
 app.use(cors({
-   origin: 'http://localhost:3000'  
- }));
+  origin: 'http://localhost:3000', 
+  credentials: true, 
+}));
+
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.json());
 
-// Routes
-app.get("/", (req, res) => {
-  res.send("Server deployed and running on vercel.");
-});
 
 //API endpoint
 
